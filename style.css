@@ -33,6 +33,35 @@ body{
     position: relative;
     overflow: hidden;
 }
+
+/* utils classes*/
+.clickable_link{
+    color: var(--white);
+    text-decoration: none;
+}
+.clickable_link:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.img_cover{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.img_cover img{
+    width: 50px!important;
+}
+/* main classes */
 .footer{
     position: absolute;
     bottom: 10px;
@@ -58,12 +87,18 @@ body{
 }
 .card_img {
     width: 100%;
+    height: fit-content;
+    cursor: pointer;
+    position: relative;
 }
 .card_img img {
     width: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
+}
+.card_img:hover .img_cover{
+    visibility: visible;
 }
 
 .card_main {
